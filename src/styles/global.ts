@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
@@ -18,9 +19,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const Container = styled.div.attrs({ className: "container" })`
+export const Container = React.memo(styled.div.attrs({ className: "container" })`
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-`;
+`);
